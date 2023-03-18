@@ -5,6 +5,7 @@ PluginImporter:
   serializedVersion: 2
   iconMap: {}
   executionOrder:
+    Licht.Unity.Effects.EffectsManager: -2
     Licht.Unity.UI.UICamera: -1
   defineConstraints: []
   isPreloaded: 0

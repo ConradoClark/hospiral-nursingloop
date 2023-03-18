@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Hospiral: Nursing Loop</title>
+  </head>
+  <body style="text-align: center; padding: 0; border: 0; margin: 0;">
+	<div style="height:20px; width: 960px; background: green;" onclick="window.unityInstance && window.unityInstance.SetFullscreen(1)"><b>Click here to make it full screen.</b></div>
+    <canvas id="unity-canvas" width=960 height=540 tabindex="-1" style="width: 960px; height: 540px; background: #231F20"></canvas>
+    <script src="Build/Release.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/Release.data",
+        frameworkUrl: "Build/Release.framework.js",
+        codeUrl: "Build/Release.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "DefaultCompany",
+        productName: "PabulumReticulation_MouseJam2",
+        productVersion: "1.0",
+        matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      }).then((instance) => {
+		window.unityInstance = instance
+	  })
+	  
+	  var scaleDownByPixelRatio = function() {
+		if(devicePixelRatio > 1) {
+			var canvas = document.querySelector("canvas");
+			canvas.style.transformOrigin = "0 0";
+			canvas.style.transform = "scale("+1.0/devicePixelRatio+")";
+		}
+	  }
+	  scaleDownByPixelRatio();
+    </script>
+  </body>
+</html>

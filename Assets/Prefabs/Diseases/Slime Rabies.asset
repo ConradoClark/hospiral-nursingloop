@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 303457b1901adbd4eb7a340ebdcb1679, type: 3}
+  m_Name: Slime Rabies
+  m_EditorClassIdentifier: 
+  <MinLevel>k__BackingField: 0
+  <Definition>k__BackingField:
+    <Cure>k__BackingField: GreenSyringe
+    <MedicineIcon>k__BackingField: {fileID: 11400000, guid: cbd185f4a9d81ed42aac321df4a31573, type: 2}
+    <Description>k__BackingField: They were attacked by a ferocious slime.

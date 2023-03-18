@@ -11,4 +11,6 @@ public enum PlayerEvents
     OnItemPickup,
     OnItemUse,
     OnItemDiscard,
+    OnInteractiveObjectHover,
+    OnInteractiveObjectLeave,
 }

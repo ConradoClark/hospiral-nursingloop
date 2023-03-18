@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Licht.Impl.Events;
 using Licht.Impl.Orchestration;
+using Licht.Interfaces.Events;
 using Licht.Unity.Objects;
 using Licht.Unity.Physics;
 using UnityEngine;
@@ -11,16 +13,21 @@ public class InteractiveObject : BaseGameRunner
     [field: SerializeField]
     public ScriptIdentifier ContactTrigger { get; private set; }
 
+    [field: SerializeField]
+    [field: Multiline]
+    public string Description { get; set; }
+
     public bool InContact { get; private set; }
 
     private SpriteRenderer _spriteRenderer;
     private LichtPhysicsObject _physicsObject;
-
+    private IEventPublisher<PlayerEvents, InteractiveObject> _eventPublisher;
     protected override void OnAwake()
     {
         base.OnAwake();
         _physicsObject = GetComponent<LichtPhysicsObject>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        _eventPublisher = this.RegisterAsEventPublisher<PlayerEvents, InteractiveObject>();
 
         if (_physicsObject != null)
         {
@@ -29,11 +36,44 @@ public class InteractiveObject : BaseGameRunner
     }
     protected override IEnumerable<IEnumerable<Action>> Handle()
     {
-        if (_spriteRenderer != null)
+        var hasTouched = false;
+        while (ComponentEnabled)
         {
+            if (_spriteRenderer == null)
+            {
+                yield return TimeYields.WaitOneFrameX;
+                yield break;
+            }
+
             var trigger = _physicsObject.GetPhysicsTrigger(ContactTrigger);
-            InContact = trigger;
-            _spriteRenderer.material.SetFloat("_ShowOutline", trigger ? 1 : 0);
+
+            if (trigger)
+            {
+                hasTouched = true;
+                InContact = true;
+                _spriteRenderer.material.SetFloat("_ShowOutline", 1);
+
+                _eventPublisher.PublishEvent(PlayerEvents.OnInteractiveObjectHover, this);
+
+                while (trigger)
+                {
+                    trigger = _physicsObject.GetPhysicsTrigger(ContactTrigger);
+                    yield return TimeYields.WaitOneFrameX;
+                }
+            }
+            else
+            {
+                InContact = false;
+                _spriteRenderer.material.SetFloat("_ShowOutline", 0);
+
+                if (hasTouched) _eventPublisher.PublishEvent(PlayerEvents.OnInteractiveObjectLeave, this);
+
+                while (!trigger)
+                {
+                    trigger = _physicsObject.GetPhysicsTrigger(ContactTrigger);
+                    yield return TimeYields.WaitOneFrameX;
+                }
+            }
         }
 
         yield return TimeYields.WaitOneFrameX;
