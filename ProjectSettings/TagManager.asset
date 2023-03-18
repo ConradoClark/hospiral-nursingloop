@@ -14,7 +14,7 @@ TagManager:
   - GameTex
   - Objects
   - Player
-  - 
+  - Shadow
   - 
   - 
   - 
@@ -40,4 +40,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: UI
+    uniqueID: 1617439095
     locked: 0
