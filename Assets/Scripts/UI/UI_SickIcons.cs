@@ -10,7 +10,7 @@ using UnityEngine;
 public class UI_SickIcons : BaseGameObject
 {
     [field: SerializeField]
-    public SpriteRenderer[] PatientIcons { get; private set; }
+    public UI_SickIcon[] PatientIcons { get; private set; }
 
     private Queue<SickPerson> _sickList;
     protected override void OnEnable()
@@ -23,12 +23,14 @@ public class UI_SickIcons : BaseGameObject
     {
         _sickList.Enqueue(obj);
         obj.OnPersonCured += Obj_OnPersonCured;
+        obj.OnPersonKilled += Obj_OnPersonCured;
         SetIcons();
     }
 
     private void Obj_OnPersonCured(SickPerson obj)
     {
         obj.OnPersonCured -= Obj_OnPersonCured;
+        obj.OnPersonKilled -= Obj_OnPersonCured;
         _sickList = new Queue<SickPerson>(_sickList.Where(sick=>sick!=obj));
         SetIcons();
     }
@@ -43,7 +45,8 @@ public class UI_SickIcons : BaseGameObject
             var sick = list[index];
 
             icon.enabled = true;
-            icon.sprite = sick.SickIcon;
+            icon.SpriteRenderer.sprite = sick.SickIcon;
+            icon.SickReference = sick;
         }
 
         for (var index = list.Length; index < PatientIcons.Length; index++)

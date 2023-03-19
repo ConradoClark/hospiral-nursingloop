@@ -24,6 +24,7 @@ public class Bed : BaseGameObject
             if (value != null)
             {
                 value.OnPersonCured += Value_OnPersonCured;
+                value.OnPersonKilled += Value_OnPersonCured;
             }
         }
     }
@@ -33,6 +34,7 @@ public class Bed : BaseGameObject
         _patient = null;
         IsOccupied = false;
         obj.OnPersonCured -= Value_OnPersonCured;
+        obj.OnPersonKilled -= Value_OnPersonCured;
     }
     public HospitalSection Section { get; private set; }
 

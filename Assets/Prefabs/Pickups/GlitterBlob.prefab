@@ -11,9 +11,8 @@ GameObject:
   - component: {fileID: 6685615990942423023}
   - component: {fileID: 3641244595367887151}
   - component: {fileID: 8675625890983185164}
-  - component: {fileID: 8802177987977307243}
   m_Layer: 8
-  m_Name: EmptySyringe
+  m_Name: GlitterBlob
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3641244595367887151
 SpriteRenderer:
@@ -75,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 14
-  m_Sprite: {fileID: 21300000, guid: d52f099ade3d5a040b256bc022b7b168, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ca39d0994c669ed44ab4c0eb617fbf74, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,22 +98,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ActiveOnInitialization: 0
-  <Identifier>k__BackingField: EmptySyringe
-  <DisplayName>k__BackingField: Empty Syringe
-  <DisplayColor>k__BackingField: {r: 1, g: 1, b: 1, a: 0.78431374}
---- !u!114 &8802177987977307243
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7670715397034842440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d31da6f6fd8816c4ab87fc271c140614, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <Tags>k__BackingField:
-  - Name: Neutral
-    Value: true
-  <PooledObject>k__BackingField: {fileID: 8675625890983185164}
+  <Identifier>k__BackingField: GlitterBlob
+  <DisplayName>k__BackingField: 'Glittery
+
+    <color=#B2CE83>Blob</color>'
+  <DisplayColor>k__BackingField: {r: 0.7529412, g: 0.6784314, b: 0.8, a: 1}

@@ -7,7 +7,6 @@ using Licht.Unity.Effects;
 using Licht.Unity.Extensions;
 using Licht.Unity.Objects;
 using Licht.Unity.Pooling;
-using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -45,14 +44,23 @@ public class SickPerson : BaseGameRunner
     [field: SerializeField]
     public AudioClip SoundOnCure { get; private set; }
 
+    [field: SerializeField]
+    public AudioClip SoundOnDeath { get; private set; }
+
+    [field: SerializeField]
+    public AudioClip SoundOnWrongItem { get; private set; }
+
     private AudioSources _audioSources;
+    private PlayerHealth _playerHealth;
 
     private DiseaseCompendium _diseaseCompendium;
     private EffectsManager _effectsManager;
     private IEventPublisher<PlayerEvents, SickPerson> _eventPublisher;
     private IPoolableComponent _currentIcon;
     public event Action<SickPerson> OnPersonCured;
+    public event Action<SickPerson> OnPersonKilled;
 
+    private bool _dead;
     protected override void OnAwake()
     {
         base.OnAwake();
@@ -60,10 +68,13 @@ public class SickPerson : BaseGameRunner
         _effectsManager = _effectsManager.FromScene(true,true);
         _eventPublisher = this.RegisterAsEventPublisher<PlayerEvents, SickPerson>();
         _audioSources = _audioSources.FromScene();
+        _playerHealth = _playerHealth.FromScene();
     }
 
     protected override void OnEnable()
     {
+        SpeechBubbleTransform.gameObject.SetActive(true);
+        _dead = false;
         base.OnEnable();
         this.ObserveEvent<PlayerEvents,IPoolableComponent>(PlayerEvents.OnItemUse, OnItemUse);
     }
@@ -76,7 +87,21 @@ public class SickPerson : BaseGameRunner
 
     private void OnItemUse(IPoolableComponent obj)
     {
-        if (!obj.HasTag("Identifier", Disease.Definition.Cure)) return;
+        if (_dead) return;
+        if (!obj.HasTag("Identifier", Disease.Definition.Cure))
+        {
+            if (!obj.HasTag("Neutral"))
+            {
+                if (Health.Value > 0)
+                {
+                    Health.Value -= 20;
+                }
+                _audioSources.PlayAudio("Sick", SoundOnWrongItem);
+
+                DefaultMachinery.AddBasicMachine(SpriteRenderer.BlinkForSeconds(1f));
+            }
+            return;
+        }
         if (HealthyPerson.TrySpawnEffect(transform.position + HealthyPersonOffset, out var healthyPerson))
         {
             healthyPerson.CustomProps["Direction"] =
@@ -109,6 +134,7 @@ public class SickPerson : BaseGameRunner
             }
             _eventPublisher.PublishEvent(PlayerEvents.OnSickSpawned, this);
         }
+
         while (Disease != null && ComponentEnabled)
         {
             if (Health.Value > 0)
@@ -117,7 +143,36 @@ public class SickPerson : BaseGameRunner
             }
             else
             {
-                // die
+                _dead = true;
+                SpeechBubbleTransform.gameObject.SetActive(false);
+
+                if (SoundOnDeath != null)
+                {
+                    _audioSources.PlayAudio("Sick", SoundOnDeath, pitch: 0.9f + Random.Range(0, 0.2f));
+                }
+
+                _playerHealth.Health.Value -= 1;
+
+                var floatEffect = transform.GetAccessor()
+                    .Position
+                    .Y
+                    .Increase(0.5f)
+                    .Over(1)
+                    .Build();
+
+                var faded = SpriteRenderer.GetAccessor()
+                    .Color
+                    .A
+                    .SetTarget(0)
+                    .Over(1)
+                    .Easing(EasingYields.EasingFunction.QuadraticEaseIn)
+                    .Build();
+
+                yield return floatEffect.Combine(faded);
+                OnPersonKilled?.Invoke(this);
+                Disease = null;
+                PooledObject.EndEffect();
+                yield break;
             }
 
             yield return TimeYields.WaitSeconds(GameTimer, HealthTickInSeconds);

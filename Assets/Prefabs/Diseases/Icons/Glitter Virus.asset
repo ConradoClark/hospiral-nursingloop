@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -972327683, guid: 9efd6108e2b79a64e9ec722a51deb277, type: 3}
+  m_Name: Glitter Virus
+  m_EditorClassIdentifier: 
+  Prefab: {fileID: 1361793035552511407, guid: 5028626e11e865840be231481164fdd5, type: 3}
+  DefaultPoolSize: 10
+  Type: 1

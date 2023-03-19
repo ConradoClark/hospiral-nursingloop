@@ -13,6 +13,16 @@ public class DiscardObjectOnInteraction : BaseGameObject
     [field: SerializeField]
     public InteractiveObject InteractiveObject { get; private set; }
 
+    [field: SerializeField]
+    public AudioClip Sound { get; private set; }
+
+    private AudioSources _audioSources;
+    protected override void OnAwake()
+    {
+        base.OnAwake();
+        _audioSources = _audioSources.FromScene();
+    }
+
     protected override void OnEnable()
     {
         base.OnEnable();
@@ -32,5 +42,10 @@ public class DiscardObjectOnInteraction : BaseGameObject
         if (!InteractiveObject.InContact || !interaction.IsHoldingObject) return;
         interaction.HeldObject.Pool.Release(interaction.HeldObject);
         interaction.HeldObject = null;
+
+        if (Sound != null)
+        {
+            _audioSources.PlayAudio("Interaction", Sound);
+        }
     }
 }
