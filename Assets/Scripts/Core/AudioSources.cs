@@ -10,7 +10,7 @@ using UnityEngine;
 
 public class AudioSources : BaseGameObject
 {
-    [field:SerializeField]
+    [field: SerializeField]
     public AudioSourceDefinition[] Sources { get; private set; }
 
     [Serializable]
@@ -28,7 +28,7 @@ public class AudioSources : BaseGameObject
             Sources.Select(kvp => new KeyValuePair<string, AudioSource>(kvp.Name, kvp.Source)));
     }
 
-    public void PlayAudio(string sourceName, AudioClip clip, float volume = 1f, float pitch =1f)
+    public void PlayAudio(string sourceName, AudioClip clip, float volume = 1f, float pitch = 1f)
     {
         if (!_sourcesDict.ContainsKey(sourceName)) return;
 
@@ -48,23 +48,34 @@ public class AudioSources : BaseGameObject
 
     private IEnumerable<IEnumerable<Action>> FadeInAudio(AudioSource source, float volume)
     {
+        if (source == null) yield break;
         source.volume = 0f;
         source.Play();
-        yield return new LerpBuilder(f => source.volume = f, () => source.volume)
+        yield return new LerpBuilder(f =>
+            {
+                if (source != null)
+                    source.volume = f;
+            }, () => source == null ? 0f : source.volume)
             .SetTarget(volume)
             .Over(0.5f)
             .Easing(EasingYields.EasingFunction.QuadraticEaseIn)
+            .BreakIf(() => source == null)
             .Build();
     }
 
     private IEnumerable<IEnumerable<Action>> FadeOutAudio(AudioSource source)
     {
-        yield return new LerpBuilder(f => source.volume = f, () => source.volume)
+        yield return new LerpBuilder(f =>
+        {
+            if (source != null)
+                source.volume = f;
+        }, () => source == null ? 0f : source.volume)
             .SetTarget(0)
             .Over(0.5f)
             .Easing(EasingYields.EasingFunction.QuadraticEaseIn)
+            .BreakIf(() => source == null)
             .Build();
 
-        source.Stop();
+        if (source != null) source.Stop();
     }
 }

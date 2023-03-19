@@ -73,6 +73,7 @@ public class SickPerson : BaseGameRunner
 
     protected override void OnEnable()
     {
+        SpriteRenderer.color = Color.white;
         SpeechBubbleTransform.gameObject.SetActive(true);
         _dead = false;
         base.OnEnable();
@@ -143,6 +144,9 @@ public class SickPerson : BaseGameRunner
             }
             else
             {
+                if (!_dead) _playerHealth.Health.Value -= 1;
+                else yield break;
+
                 _dead = true;
                 SpeechBubbleTransform.gameObject.SetActive(false);
 
@@ -150,8 +154,6 @@ public class SickPerson : BaseGameRunner
                 {
                     _audioSources.PlayAudio("Sick", SoundOnDeath, pitch: 0.9f + Random.Range(0, 0.2f));
                 }
-
-                _playerHealth.Health.Value -= 1;
 
                 var floatEffect = transform.GetAccessor()
                     .Position

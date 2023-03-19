@@ -56,7 +56,7 @@ internal class GameLevel : BaseGameRunner
     private void Health_OnChange(Licht.Unity.Objects.Stats.ScriptStat<int>.StatUpdate obj)
     {
         if (obj.NewValue <= 0) GameOver = true;
-
+        if (!GameOver) return;
         DefaultMachinery.AddUniqueMachine($"gameOver_{GetInstanceID()}", UniqueMachine.UniqueMachineBehaviour.Cancel,
             ShowGameOver());
     }
@@ -70,7 +70,7 @@ internal class GameLevel : BaseGameRunner
 
     protected override IEnumerable<IEnumerable<Action>> Handle()
     {
-        while (ComponentEnabled)
+        while (ComponentEnabled && !GameOver)
         {
             var bed = _bedManager.GetRandomUnoccupiedBed();
 

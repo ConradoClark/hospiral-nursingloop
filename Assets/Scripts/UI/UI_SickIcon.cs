@@ -29,7 +29,7 @@ public class UI_SickIcon : BaseGameObject
     {
         if (SickReference == null) return;
 
-        _heartSpriteRenderer.size = new Vector2 (Mathf.Lerp(0, 0.5f,
+        _heartSpriteRenderer.size = new Vector2 (Mathf.Lerp(0.1f, 0.5f,
             (float)SickReference.Health.Value / SickReference.Health.InitialValue), 0.5f);
     }
 

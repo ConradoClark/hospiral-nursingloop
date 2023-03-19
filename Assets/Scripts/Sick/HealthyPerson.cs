@@ -21,7 +21,7 @@ public class HealthyPerson : BaseGameRunner
         yield return TimeYields.WaitOneFrameX;
 
         var direction = PooledObject.HasProp("Direction") ? PooledObject.CustomProps["Direction"] : 1;
-        while (transform.position.x is < 10 or > -10)
+        while (transform.position.x is < 8 and > -8)
         {
             transform.Translate((float)GameTimer.UpdatedTimeInMilliseconds * 0.001f 
                                 * Speed * new Vector3(direction,0,0));
