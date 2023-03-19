@@ -13,4 +13,5 @@ public enum PlayerEvents
     OnItemDiscard,
     OnInteractiveObjectHover,
     OnInteractiveObjectLeave,
+    OnSickSpawned
 }

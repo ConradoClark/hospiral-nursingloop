@@ -15,12 +15,16 @@ public class HealthyPerson : BaseGameRunner
     public float Speed { get; private set; }
     [field: SerializeField]
     public EffectPoolable PooledObject { get; private set; }
+
     protected override IEnumerable<IEnumerable<Action>> Handle()
     {
-        while (transform.position.x > -7.2)
+        yield return TimeYields.WaitOneFrameX;
+
+        var direction = PooledObject.HasProp("Direction") ? PooledObject.CustomProps["Direction"] : 1;
+        while (transform.position.x is < 10 or > -10)
         {
-            transform.Translate(Vector3.left 
-                                * (float)GameTimer.UpdatedTimeInMilliseconds * 0.001f * Speed);
+            transform.Translate((float)GameTimer.UpdatedTimeInMilliseconds * 0.001f 
+                                * Speed * new Vector3(direction,0,0));
             yield return TimeYields.WaitOneFrameX;
         }
 

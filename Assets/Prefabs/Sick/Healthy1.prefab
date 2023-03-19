@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3532887148263589037}
   - component: {fileID: 171047813670823868}
   - component: {fileID: 8369279853905609401}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Healthy1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <RunOnEnable>k__BackingField: 1
-  <Loop>k__BackingField: 0
+  <Loop>k__BackingField: 1
   <TimerReference>k__BackingField: {fileID: 0}
   <Speed>k__BackingField: 0.5
   <PooledObject>k__BackingField: {fileID: 8369279853905609401}

@@ -2,14 +2,21 @@
 using System.Collections.Generic;
 using Licht.Impl.Events;
 using Licht.Impl.Orchestration;
+using Licht.Interfaces.Events;
 using Licht.Unity.Effects;
 using Licht.Unity.Extensions;
 using Licht.Unity.Objects;
 using Licht.Unity.Pooling;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SickPerson : BaseGameRunner
 {
+    [field: SerializeField]
+    public SpriteRenderer SpriteRenderer { get; private set; }
+
+    [field: SerializeField]
+    public Sprite SickIcon { get; private set; }
     public Disease Disease { get; private set; }
     [field: SerializeField]
     public CounterStat Health { get; private set; }
@@ -28,34 +35,28 @@ public class SickPerson : BaseGameRunner
     [field:SerializeField]
     public ScriptPrefab HealthyPerson { get; private set; }
 
-    //[field: SerializeField]
-    //public EffectPoolable PooledObject { get; private set; }
+    [field: SerializeField]
+    public EffectPoolable PooledObject { get; private set; }
 
     [field: SerializeField]
     public Vector3 HealthyPersonOffset { get; private set; }
 
     private DiseaseCompendium _diseaseCompendium;
     private EffectsManager _effectsManager;
+    private IEventPublisher<PlayerEvents, SickPerson> _eventPublisher;
+    private IPoolableComponent _currentIcon;
+    public event Action<SickPerson> OnPersonCured;
 
     protected override void OnAwake()
     {
         base.OnAwake();
         _diseaseCompendium = _diseaseCompendium.FromScene();
         _effectsManager = _effectsManager.FromScene(true,true);
+        _eventPublisher = this.RegisterAsEventPublisher<PlayerEvents, SickPerson>();
     }
 
     protected override void OnEnable()
     {
-        Disease = _diseaseCompendium.PickDisease();
-        Debug.Log(Disease);
-        Debug.Log(Disease.Definition.MedicineIcon);
-        Debug.Log(_effectsManager);
-        InteractiveObject.Description = Disease.Definition.Description;
-        if (_effectsManager.GetEffect(Disease.Definition.MedicineIcon).TryGetFromPool(out var icon))
-        {
-            icon.Component.transform.SetParent(SpeechBubbleTransform);
-            icon.Component.transform.localPosition = IconOffset;
-        }
         base.OnEnable();
         this.ObserveEvent<PlayerEvents,IPoolableComponent>(PlayerEvents.OnItemUse, OnItemUse);
     }
@@ -69,13 +70,34 @@ public class SickPerson : BaseGameRunner
     private void OnItemUse(IPoolableComponent obj)
     {
         if (!obj.HasTag("Identifier", Disease.Definition.Cure)) return;
-        HealthyPerson.TrySpawnEffect(transform.position + HealthyPersonOffset, out _);
-        gameObject.SetActive(false); // temporary
+        if (HealthyPerson.TrySpawnEffect(transform.position + HealthyPersonOffset, out var healthyPerson))
+        {
+            healthyPerson.CustomProps["Direction"] =
+                PooledObject.HasProp("Direction") ? PooledObject.CustomProps["Direction"] : 1f;
+        }
+
+        OnPersonCured?.Invoke(this);
+        Disease = null;
+        if (PooledObject!= null) PooledObject.EndEffect();
     }
 
     protected override IEnumerable<IEnumerable<Action>> Handle()
     {
-        while (Disease != null)
+        yield return TimeYields.WaitOneFrameX;
+        if (ComponentEnabled && Disease == null)
+        {
+            Disease = _diseaseCompendium.PickDisease();
+            InteractiveObject.Description = Disease.Definition.Description;
+            if (_effectsManager.GetEffect(Disease.Definition.MedicineIcon).TryGetFromPool(out var icon))
+            {
+                icon.Component.transform.SetParent(SpeechBubbleTransform);
+                icon.Component.transform.localPosition = IconOffset;
+                _currentIcon = icon;
+                PooledObject.OnEffectOver += PooledObject_OnEffectOver;
+            }
+            _eventPublisher.PublishEvent(PlayerEvents.OnSickSpawned, this);
+        }
+        while (Disease != null && ComponentEnabled)
         {
             if (Health.Value > 0)
             {
@@ -88,5 +110,11 @@ public class SickPerson : BaseGameRunner
 
             yield return TimeYields.WaitSeconds(GameTimer, HealthTickInSeconds);
         }
+    }
+
+    private void PooledObject_OnEffectOver()
+    {
+        PooledObject.OnEffectOver -= PooledObject_OnEffectOver;
+        _currentIcon?.Pool.Release(_currentIcon);
     }
 }

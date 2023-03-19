@@ -12,6 +12,7 @@ public class PickupObject : EffectPoolable
     public string Identifier { get; private set; }
 
     [field: SerializeField]
+    [field:Multiline]
     public string DisplayName { get; private set; }
 
     [field: SerializeField]

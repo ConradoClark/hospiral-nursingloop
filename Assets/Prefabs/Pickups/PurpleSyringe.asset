@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -972327683, guid: 9efd6108e2b79a64e9ec722a51deb277, type: 3}
+  m_Name: PurpleSyringe
+  m_EditorClassIdentifier: 
+  Prefab: {fileID: 7670715397034842440, guid: b7a1832790eece44d9552806f9a0fa70, type: 3}
+  DefaultPoolSize: 10
+  Type: 1
