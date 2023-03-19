@@ -98,7 +98,7 @@ public class SickPerson : BaseGameRunner
                     Health.Value -= 20;
                 }
                 _audioSources.PlayAudio("Sick", SoundOnWrongItem);
-
+                _eventPublisher.PublishEvent(PlayerEvents.OnMedicalError, this);
                 DefaultMachinery.AddBasicMachine(SpriteRenderer.BlinkForSeconds(1f));
             }
             return;
@@ -115,6 +115,7 @@ public class SickPerson : BaseGameRunner
         }
 
         OnPersonCured?.Invoke(this);
+        _eventPublisher.PublishEvent(PlayerEvents.OnSickCured, this);
         Disease = null;
         if (PooledObject!= null) PooledObject.EndEffect();
     }
@@ -172,6 +173,7 @@ public class SickPerson : BaseGameRunner
 
                 yield return floatEffect.Combine(faded);
                 OnPersonKilled?.Invoke(this);
+                _eventPublisher.PublishEvent(PlayerEvents.OnSickDied, this);
                 Disease = null;
                 PooledObject.EndEffect();
                 yield break;
