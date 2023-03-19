@@ -9,6 +9,7 @@ using Licht.Unity.Objects;
 using Licht.Unity.Pooling;
 using Unity.VisualScripting;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class SickPerson : BaseGameRunner
 {
@@ -41,6 +42,11 @@ public class SickPerson : BaseGameRunner
     [field: SerializeField]
     public Vector3 HealthyPersonOffset { get; private set; }
 
+    [field: SerializeField]
+    public AudioClip SoundOnCure { get; private set; }
+
+    private AudioSources _audioSources;
+
     private DiseaseCompendium _diseaseCompendium;
     private EffectsManager _effectsManager;
     private IEventPublisher<PlayerEvents, SickPerson> _eventPublisher;
@@ -53,6 +59,7 @@ public class SickPerson : BaseGameRunner
         _diseaseCompendium = _diseaseCompendium.FromScene();
         _effectsManager = _effectsManager.FromScene(true,true);
         _eventPublisher = this.RegisterAsEventPublisher<PlayerEvents, SickPerson>();
+        _audioSources = _audioSources.FromScene();
     }
 
     protected override void OnEnable()
@@ -74,6 +81,11 @@ public class SickPerson : BaseGameRunner
         {
             healthyPerson.CustomProps["Direction"] =
                 PooledObject.HasProp("Direction") ? PooledObject.CustomProps["Direction"] : 1f;
+        }
+
+        if (SoundOnCure != null)
+        {
+            _audioSources.PlayAudio("Sick", SoundOnCure, pitch: 0.9f + Random.Range(0, 0.2f));
         }
 
         OnPersonCured?.Invoke(this);

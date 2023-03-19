@@ -19,6 +19,16 @@ public class ReplaceObjectOnInteraction : BaseGameObject
     [field: SerializeField]
     public ScriptPrefab ReplacementObject { get; private set; }
 
+    [field: SerializeField]
+    public AudioClip Sound { get; private set; }
+
+    private AudioSources _audioSources;
+    protected override void OnAwake()
+    {
+        base.OnAwake();
+        _audioSources = _audioSources.FromScene();
+    }
+
     protected override void OnEnable()
     {
         base.OnEnable();
@@ -40,6 +50,11 @@ public class ReplaceObjectOnInteraction : BaseGameObject
 
         interaction.HeldObject.Pool.Release(interaction.HeldObject);
         if (!ReplacementObject.TrySpawnEffect(interaction.transform.position + interaction.HoldObjectOffset, out var obj)) return;
+
+        if (Sound != null)
+        {
+            _audioSources.PlayAudio("Interaction", Sound);
+        }
 
         obj.Component.transform.SetParent(interaction.transform);
         interaction.HeldObject = obj;

@@ -226,6 +226,7 @@ MonoBehaviour:
   <IdentifierRequirement>k__BackingField:
   - EmptySyringe
   <ReplacementObject>k__BackingField: {fileID: 11400000, guid: 168092fa9ea107b43afd5a0c97cb0ebd, type: 2}
+  <Sound>k__BackingField: {fileID: 8300000, guid: 09421773bfe7de84394355d1d60aad13, type: 3}
 --- !u!1 &7202087044895379894
 GameObject:
   m_ObjectHideFlags: 0

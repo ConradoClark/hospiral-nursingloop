@@ -16,6 +16,16 @@ public class ProvideObjectOnInteraction : BaseGameObject
     [field: SerializeField]
     public ScriptPrefab Object { get; private set; }
 
+    [field: SerializeField]
+    public AudioClip Sound { get; private set; }
+
+    private AudioSources _audioSources;
+    protected override void OnAwake()
+    {
+        base.OnAwake();
+        _audioSources = _audioSources.FromScene();
+    }
+
     protected override void OnEnable()
     {
         base.OnEnable();
@@ -34,6 +44,11 @@ public class ProvideObjectOnInteraction : BaseGameObject
     {
         if (!InteractiveObject.InContact || interaction.IsHoldingObject) return;
         if (!Object.TrySpawnEffect(interaction.transform.position + interaction.HoldObjectOffset, out var obj)) return;
+
+        if (Sound != null)
+        {
+            _audioSources.PlayAudio("Interaction", Sound);
+        }
 
         obj.Component.transform.SetParent(interaction.transform);
         interaction.HeldObject = obj;

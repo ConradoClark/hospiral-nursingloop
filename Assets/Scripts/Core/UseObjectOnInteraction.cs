@@ -20,11 +20,15 @@ public class UseObjectOnInteraction : BaseGameObject
 
     public event Action<IPoolableComponent> OnObjectUsed;
     private IEventPublisher<PlayerEvents, IPoolableComponent> _eventPublisher;
+    [field: SerializeField]
+    public AudioClip Sound { get; private set; }
 
+    private AudioSources _audioSources;
     protected override void OnAwake()
     {
         base.OnAwake();
         _eventPublisher = this.RegisterAsEventPublisher<PlayerEvents, IPoolableComponent>();
+        _audioSources = _audioSources.FromScene();
     }
 
     protected override void OnEnable()
@@ -47,6 +51,11 @@ public class UseObjectOnInteraction : BaseGameObject
         if (IdentifierRequirement.All(req => !interaction.HeldObject.HasTag("Identifier", req))) return;
 
         interaction.HeldObject.Pool.Release(interaction.HeldObject);
+
+        if (Sound != null)
+        {
+            _audioSources.PlayAudio("Interaction", Sound);
+        }
 
         OnObjectUsed?.Invoke(interaction.HeldObject);
         _eventPublisher.PublishEvent(PlayerEvents.OnItemUse, interaction.HeldObject);
