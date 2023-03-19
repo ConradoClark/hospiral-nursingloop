@@ -1,0 +1,1522 @@
+fileFormatVersion: 2
+guid: 24a13d1281ff4634280024a6553aa228
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 330
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e1896cb2f85839468c9d6bc050d48c2
+      internalID: -226479188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_1
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 330
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1acd66eec5d5a764fb8d0a92e6c0adc9
+      internalID: 919263348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_2
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 330
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a25ebe34764770418e927befaf43f17
+      internalID: 571918534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_3
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 330
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5520cca0c67871741915cd2b862d092e
+      internalID: -520875392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_4
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 330
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc296087b7bfa044eac350ecb183b8a2
+      internalID: -1930452955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_5
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 330
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61fdc5a547223d94dbc51234f41a8e23
+      internalID: 893628828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_6
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 330
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57c8708bae9afbb4f93a09c70ca79cdf
+      internalID: -799727104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_7
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 330
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64dfb6622ff308a49a6cf3678bc1e267
+      internalID: 86416281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_8
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 330
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9368c61366f1c434389184cd273a3b76
+      internalID: -2066856794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 275
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cd961f4aaf27c74eac46de8123af749
+      internalID: 1592618800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_10
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 275
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15bebe59a1666504294ce15d50ccf584
+      internalID: 315502256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_11
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 275
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d26cbf403daa479419b4843243a9328c
+      internalID: 232908371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_12
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 275
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc48e0216fb32c34c8940652d5038823
+      internalID: -659101173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_13
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 275
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 980e17db4df905241bcd000970eda09d
+      internalID: -844672661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_14
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 275
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0888793aba9fbac4297325c9954ea98b
+      internalID: 1680889024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_15
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 275
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd9d380f2f0e2f94fabff0240bcf3e88
+      internalID: -1879060514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_16
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 275
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a18bd828e366b7a488a1c933652a5d83
+      internalID: 2015387442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_17
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 275
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d89f991a832b1ee40867b6887932391a
+      internalID: -384278354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 220
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fd5014a6c7b54f489597dd2bf3b3992
+      internalID: -1572042691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_19
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 220
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84bad118ff0ed054ab9366946c8df75e
+      internalID: 72685147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_20
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 220
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9c6bb0c8bf821046974210608afbc7f
+      internalID: 634895914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_21
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 220
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d2f1f9711ccc9e4f97954aec4750924
+      internalID: -1060385478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_22
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 220
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 458b4e3a4a08aad4da057814469ecbea
+      internalID: -862011507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_23
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 220
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98967555d7e3a30438da90f94fa6ce81
+      internalID: 371676315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_24
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 220
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 416cdad51ef7f6c48af71a6b5e66dedf
+      internalID: -432310128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_25
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 220
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e42423b82e67f148a223e786bf1c795
+      internalID: -1436409969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_26
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 220
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 054b2dfebeea54447b9e9a4887d6c334
+      internalID: 897323408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 165
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07cc9e3c6d25ced4687d44bc1672111c
+      internalID: -245284375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_28
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 165
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 558e00e187fe5d942b27c9e9494c20d7
+      internalID: -1678651793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_29
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 165
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 145cb29155bfdab44a2813007ec65812
+      internalID: -334795125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_30
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 165
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf49e0b1348c13841ab7ca627d6efe3d
+      internalID: 1472432990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_31
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 165
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39a24e40bcb54774295eed6eca094985
+      internalID: 1552585642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_32
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 165
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c17a8ff660405445a20aef8b92d28c6
+      internalID: -1038535849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_33
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 165
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1166651126024ee4986a9e724d74b176
+      internalID: 1067244326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_34
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 165
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 883b2364bf070ca45ad46dfaf47967bc
+      internalID: -455720987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_35
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 165
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8317a64686d5e441aeb3076b6e3466a
+      internalID: -51834886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 110
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f0dae7756ce4a04cb807ed69fb43872
+      internalID: 1246631989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_37
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 110
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f29241bbf31f1448a43273cd0fac8ad
+      internalID: 1517691762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_38
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 110
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc5a92e43d5bf0b45b87b693ccdb9557
+      internalID: 1812140594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_39
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 110
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ccf0d4878f518e47845c470de6dde68
+      internalID: -1777455285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_40
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 110
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a05ead65f293ce247babf4211cebe40f
+      internalID: -112445913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_41
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 110
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af5f9bd609d25bd4fb171655d84a2de7
+      internalID: -148829364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_42
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 110
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89a4f6e3718a1a848aa77ed9092fa921
+      internalID: -1732891041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_43
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 110
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f19f7294078b599438950758e291a5d7
+      internalID: -138617830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_44
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 110
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8b51c59a90c2ef41bdfe52658a252c4
+      internalID: 1320365217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 55
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 504e7b0ad2ac99b4b99f443cffcae4ab
+      internalID: -1022109116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_46
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 55
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 455738035f7f7974f852b63ab592b0b2
+      internalID: -851912943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_47
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 55
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4391c44ce9617024e82057e3362796d0
+      internalID: -390682577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_48
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 55
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41041014dc679d64bb1b6f2ba0717e34
+      internalID: 200276412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_49
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 55
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2ef4ff1e07c6504f830e537ccaf13a8
+      internalID: -1542365566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_50
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 55
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79f5e463c462a0c4dadc229310311f69
+      internalID: -921916897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_51
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 55
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19286101adcdf7c4e91f031375d7e9f4
+      internalID: 64920918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_52
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 55
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fe918b0772d49c4ba74331a15b9342b
+      internalID: -975190780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_53
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 55
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04d8512c9ff1f21428e2ef2585830e7d
+      internalID: -1182685469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c77112855d9af004fb98e863fe1973c5
+      internalID: 1365567581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_55
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 0
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48b4baee46ab8784da852e944180732f
+      internalID: 1797726605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_56
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 0
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31cbb00d211ff1448b1a31e2a65c1e67
+      internalID: 17044143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_57
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 0
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bce6131849666fc45ad4d38a7e9f5f2d
+      internalID: 880547733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_58
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 0
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df1e50ba0dc4ce743b401f2272a3aed7
+      internalID: 1548154409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_59
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 0
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44416a4ff93e7fd49afa9a7262d096d4
+      internalID: -1544924888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_60
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 0
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b10ccded0a7a1b4d96c1bf1c9102c38
+      internalID: 1988293364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_61
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 0
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e72dfc9aa83a3446b8c729ca93e2bf7
+      internalID: -1066060034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HospiralTextAnimation_146x55_62
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 0
+        width: 146
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de2ebb7eb367fb142a97765529da2623
+      internalID: 534963994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      HospiralTextAnimation_146x55_0: -226479188
+      HospiralTextAnimation_146x55_1: 919263348
+      HospiralTextAnimation_146x55_10: 315502256
+      HospiralTextAnimation_146x55_11: 232908371
+      HospiralTextAnimation_146x55_12: -659101173
+      HospiralTextAnimation_146x55_13: -844672661
+      HospiralTextAnimation_146x55_14: 1680889024
+      HospiralTextAnimation_146x55_15: -1879060514
+      HospiralTextAnimation_146x55_16: 2015387442
+      HospiralTextAnimation_146x55_17: -384278354
+      HospiralTextAnimation_146x55_18: -1572042691
+      HospiralTextAnimation_146x55_19: 72685147
+      HospiralTextAnimation_146x55_2: 571918534
+      HospiralTextAnimation_146x55_20: 634895914
+      HospiralTextAnimation_146x55_21: -1060385478
+      HospiralTextAnimation_146x55_22: -862011507
+      HospiralTextAnimation_146x55_23: 371676315
+      HospiralTextAnimation_146x55_24: -432310128
+      HospiralTextAnimation_146x55_25: -1436409969
+      HospiralTextAnimation_146x55_26: 897323408
+      HospiralTextAnimation_146x55_27: -245284375
+      HospiralTextAnimation_146x55_28: -1678651793
+      HospiralTextAnimation_146x55_29: -334795125
+      HospiralTextAnimation_146x55_3: -520875392
+      HospiralTextAnimation_146x55_30: 1472432990
+      HospiralTextAnimation_146x55_31: 1552585642
+      HospiralTextAnimation_146x55_32: -1038535849
+      HospiralTextAnimation_146x55_33: 1067244326
+      HospiralTextAnimation_146x55_34: -455720987
+      HospiralTextAnimation_146x55_35: -51834886
+      HospiralTextAnimation_146x55_36: 1246631989
+      HospiralTextAnimation_146x55_37: 1517691762
+      HospiralTextAnimation_146x55_38: 1812140594
+      HospiralTextAnimation_146x55_39: -1777455285
+      HospiralTextAnimation_146x55_4: -1930452955
+      HospiralTextAnimation_146x55_40: -112445913
+      HospiralTextAnimation_146x55_41: -148829364
+      HospiralTextAnimation_146x55_42: -1732891041
+      HospiralTextAnimation_146x55_43: -138617830
+      HospiralTextAnimation_146x55_44: 1320365217
+      HospiralTextAnimation_146x55_45: -1022109116
+      HospiralTextAnimation_146x55_46: -851912943
+      HospiralTextAnimation_146x55_47: -390682577
+      HospiralTextAnimation_146x55_48: 200276412
+      HospiralTextAnimation_146x55_49: -1542365566
+      HospiralTextAnimation_146x55_5: 893628828
+      HospiralTextAnimation_146x55_50: -921916897
+      HospiralTextAnimation_146x55_51: 64920918
+      HospiralTextAnimation_146x55_52: -975190780
+      HospiralTextAnimation_146x55_53: -1182685469
+      HospiralTextAnimation_146x55_54: 1365567581
+      HospiralTextAnimation_146x55_55: 1797726605
+      HospiralTextAnimation_146x55_56: 17044143
+      HospiralTextAnimation_146x55_57: 880547733
+      HospiralTextAnimation_146x55_58: 1548154409
+      HospiralTextAnimation_146x55_59: -1544924888
+      HospiralTextAnimation_146x55_6: -799727104
+      HospiralTextAnimation_146x55_60: 1988293364
+      HospiralTextAnimation_146x55_61: -1066060034
+      HospiralTextAnimation_146x55_62: 534963994
+      HospiralTextAnimation_146x55_7: 86416281
+      HospiralTextAnimation_146x55_8: -2066856794
+      HospiralTextAnimation_146x55_9: 1592618800
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

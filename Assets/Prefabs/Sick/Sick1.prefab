@@ -181,7 +181,7 @@ MonoBehaviour:
   <IconOffset>k__BackingField: {x: 0.305, y: -0.378, z: 0}
   <HealthyPerson>k__BackingField: {fileID: 11400000, guid: 910b667488a3009418815361a3220280, type: 2}
   <PooledObject>k__BackingField: {fileID: 5690824425493100587}
-  <HealthyPersonOffset>k__BackingField: {x: 0, y: -0.15, z: 0}
+  <HealthyPersonOffset>k__BackingField: {x: 0, y: -0.1, z: 0}
   <SoundOnCure>k__BackingField: {fileID: 8300000, guid: 95f9f2ccdb65c4d4b9c50d23a855b9ce, type: 3}
   <SoundOnDeath>k__BackingField: {fileID: 8300000, guid: d26badc96463fc84dbc438169f1e47f1, type: 3}
   <SoundOnWrongItem>k__BackingField: {fileID: 8300000, guid: d62ae755d926b234ca67a565c49205d5, type: 3}

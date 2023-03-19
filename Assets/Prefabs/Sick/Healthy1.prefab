@@ -101,7 +101,7 @@ MonoBehaviour:
   <RunOnEnable>k__BackingField: 1
   <Loop>k__BackingField: 1
   <TimerReference>k__BackingField: {fileID: 0}
-  <Speed>k__BackingField: 0.5
+  <Speed>k__BackingField: 0.65
   <PooledObject>k__BackingField: {fileID: 8369279853905609401}
 --- !u!114 &8369279853905609401
 MonoBehaviour:
