@@ -20,6 +20,13 @@ public class DiscardObjectOnInteraction : BaseGameObject
             (PlayerEvents.OnInteractionButtonPressed, OnInteractionButtonPressed);
     }
 
+    protected override void OnDisable()
+    {
+        base.OnDisable();
+        this.StopObservingEvent<PlayerEvents, PlayerInteraction>
+            (PlayerEvents.OnInteractionButtonPressed, OnInteractionButtonPressed);
+    }
+
     private void OnInteractionButtonPressed(PlayerInteraction interaction)
     {
         if (!InteractiveObject.InContact || !interaction.IsHoldingObject) return;

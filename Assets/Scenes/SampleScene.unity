@@ -353,6 +353,7 @@ GameObject:
   - component: {fileID: 167574457}
   - component: {fileID: 167574459}
   - component: {fileID: 167574458}
+  - component: {fileID: 167574460}
   m_Layer: 8
   m_Name: CharacterSprite
   m_TagString: Untagged
@@ -447,6 +448,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &167574460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167574456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e0e5706330c4224ba6f98cdee4361ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <MoveController>k__BackingField: {fileID: 1122839356}
+  <Animator>k__BackingField: {fileID: 167574458}
+  <CharacterSprite>k__BackingField: {fileID: 167574459}
+  <Grounded>k__BackingField: {fileID: 11400000, guid: 5d19b11a018830b45a8b84d64efc4acd, type: 2}
+  <PhysicsObject>k__BackingField: {fileID: 173397709}
 --- !u!1 &173397707
 GameObject:
   m_ObjectHideFlags: 0
@@ -2368,7 +2386,6 @@ MonoBehaviour:
   <SpeechBubbleTransform>k__BackingField: {fileID: 240438214}
   <IconOffset>k__BackingField: {x: 0.305, y: -0.378, z: 0}
   <HealthyPerson>k__BackingField: {fileID: 11400000, guid: 910b667488a3009418815361a3220280, type: 2}
-  <PooledObject>k__BackingField: {fileID: 0}
   <HealthyPersonOffset>k__BackingField: {x: 0, y: -0.15, z: 0}
 --- !u!114 &782873728
 MonoBehaviour:

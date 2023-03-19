@@ -59,13 +59,18 @@ public class SickPerson : BaseGameRunner
         base.OnEnable();
         this.ObserveEvent<PlayerEvents,IPoolableComponent>(PlayerEvents.OnItemUse, OnItemUse);
     }
+
+    protected override void OnDisable()
+    {
+        base.OnDisable();
+        this.StopObservingEvent<PlayerEvents, IPoolableComponent>(PlayerEvents.OnItemUse, OnItemUse);
+    }
+
     private void OnItemUse(IPoolableComponent obj)
     {
-        if (obj.HasTag("Identifier", Disease.Definition.Cure))
-        {
-            HealthyPerson.TrySpawnEffect(transform.position + HealthyPersonOffset, out _);
-            gameObject.SetActive(false); // temporary
-        }
+        if (!obj.HasTag("Identifier", Disease.Definition.Cure)) return;
+        HealthyPerson.TrySpawnEffect(transform.position + HealthyPersonOffset, out _);
+        gameObject.SetActive(false); // temporary
     }
 
     protected override IEnumerable<IEnumerable<Action>> Handle()
