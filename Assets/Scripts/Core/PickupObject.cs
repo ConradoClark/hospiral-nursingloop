@@ -18,10 +18,27 @@ public class PickupObject : EffectPoolable
     [field: SerializeField]
     public Color DisplayColor { get; private set; }
 
+    [field: SerializeField]
+    public bool StageObject { get; private set; }
+
+    protected override void OnEnable()
+    {
+        base.OnEnable();
+        if (!StageObject) return;
+        Initialize();
+        OnActivation();
+    }
+
     public override void OnActivation()
     {
         CustomTags["Identifier"] = Identifier;
         CustomTags["DisplayName"] = DisplayName;
         CustomTags["DisplayColor"] = $"#{ColorUtility.ToHtmlStringRGBA(DisplayColor)}";
+        OnEffectOver+= OnOnEffectOver;
+    }
+
+    private void OnOnEffectOver()
+    {
+        if (Pool==null) gameObject.SetActive(false);
     }
 }

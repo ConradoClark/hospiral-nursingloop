@@ -10,8 +10,11 @@ using UnityEngine;
 
 public class UI_ReportCounter : BaseGameObject
 {
+    [field: SerializeField]
     public int MinForBRank { get; private set; }
+    [field: SerializeField]
     public int MinForARank { get; private set; }
+    [field: SerializeField]
     public int MinForSRank { get; private set; }
 
     [field: SerializeField]

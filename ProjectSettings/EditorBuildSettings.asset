@@ -17,4 +17,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ShiftOne.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/ShiftTwo.unity
+    guid: a434090a8e15f334aa8e3bb23daac16c
+  - enabled: 1
+    path: Assets/Scenes/ShiftThree.unity
+    guid: 248da241593db3c4cbfa68b6967aafe7
+  - enabled: 1
+    path: Assets/Scenes/ShiftFour.unity
+    guid: a5206de84bd17b24bbb622a182446216
   m_configObjects: {}

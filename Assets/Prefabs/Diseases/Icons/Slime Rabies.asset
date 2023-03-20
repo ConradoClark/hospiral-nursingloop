@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Slime Rabies
   m_EditorClassIdentifier: 
   Prefab: {fileID: 1361793035552511407, guid: 7b03a3c7991cb0143aa38df7f9d43a6e, type: 3}
-  DefaultPoolSize: 10
+  DefaultPoolSize: 30
   Type: 1

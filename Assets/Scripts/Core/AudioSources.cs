@@ -31,6 +31,7 @@ public class AudioSources : BaseGameObject
     public void PlayAudio(string sourceName, AudioClip clip, float volume = 1f, float pitch = 1f)
     {
         if (!_sourcesDict.ContainsKey(sourceName)) return;
+        if (_sourcesDict[sourceName] == null) return;
 
         _sourcesDict[sourceName].clip = clip;
         _sourcesDict[sourceName].pitch = pitch;
@@ -41,7 +42,7 @@ public class AudioSources : BaseGameObject
 
     public void StopAudio(string sourceName, AudioClip clip)
     {
-        if (!_sourcesDict.ContainsKey(sourceName) || _sourcesDict[sourceName].clip != clip) return;
+        if (!_sourcesDict.ContainsKey(sourceName) || _sourcesDict[sourceName] == null || _sourcesDict[sourceName].clip != clip) return;
         DefaultMachinery.AddUniqueMachine($"fadeOut_{sourceName}", UniqueMachine.UniqueMachineBehaviour.Cancel,
             FadeOutAudio(_sourcesDict[sourceName]));
     }

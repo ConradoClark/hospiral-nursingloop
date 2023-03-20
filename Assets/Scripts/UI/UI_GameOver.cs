@@ -10,8 +10,8 @@ public class UI_GameOver : BaseGameObject
 {
     public IEnumerable<IEnumerable<Action>> Show()
     {
-        yield return TimeYields.WaitSeconds(UITimer, 0.5f);
         gameObject.SetActive(true);
+        yield return TimeYields.WaitSeconds(UITimer, 0.5f);
     }
 }
 

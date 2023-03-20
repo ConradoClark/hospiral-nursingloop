@@ -1,5 +1,69 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1655175713016040015
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4070580912460655559}
+  - component: {fileID: 4815053599112505625}
+  - component: {fileID: 8576398988474262870}
+  m_Layer: 7
+  m_Name: Painkillers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4070580912460655559
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655175713016040015}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 393073825812846882}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4815053599112505625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655175713016040015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ed1ab18cb6480144a5ad64d45f23369, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <InteractiveObject>k__BackingField: {fileID: 8362505790285916360}
+  <IdentifierRequirement>k__BackingField:
+  - Painkiller
+  <Sound>k__BackingField: {fileID: 8300000, guid: 8f876cd0f7520224281952d26ea175e8, type: 3}
+--- !u!114 &8576398988474262870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655175713016040015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 695ac22cb6ef7534faf3fa986008ffdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Interaction>k__BackingField: {fileID: 4815053599112505625}
+  <SickPerson>k__BackingField: {fileID: 7394984144964309763}
+  <EffectDurationInSeconds>k__BackingField: 15
 --- !u!1 &2890153063230953236
 GameObject:
   m_ObjectHideFlags: 0
@@ -18,6 +82,7 @@ GameObject:
   - component: {fileID: 7463998585146638356}
   - component: {fileID: 1154078869154966132}
   - component: {fileID: 5690824425493100587}
+  - component: {fileID: 8421057789976719211}
   m_Layer: 7
   m_Name: Sick1
   m_TagString: Untagged
@@ -38,6 +103,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9093525035548860813}
+  - {fileID: 4070580912460655559}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -152,10 +218,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <InteractiveObject>k__BackingField: {fileID: 8362505790285916360}
   <IdentifierRequirement>k__BackingField:
-  - EmptySyringe
   - GreenSyringe
   - PurpleSyringe
   - GlitterBlob
+  - BloodVial
   <Sound>k__BackingField: {fileID: 0}
 --- !u!114 &7394984144964309763
 MonoBehaviour:
@@ -286,6 +352,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ActiveOnInitialization: 0
+--- !u!114 &8421057789976719211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2890153063230953236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0667470fdd2de6468b67b15a294eb6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <SickPerson>k__BackingField: {fileID: 7394984144964309763}
+  <MedicalErrorIfCure>k__BackingField: BloodVial
+  <InteractiveObject>k__BackingField: {fileID: 8362505790285916360}
+  <IdentifierRequirement>k__BackingField:
+  - EmptySyringe
+  <ReplacementObject>k__BackingField: {fileID: 11400000, guid: 306f0249df40aba43a5860ead7826f08, type: 2}
+  <Sound>k__BackingField: {fileID: 8300000, guid: ff3ad12c297907f479d173af0a618fad, type: 3}
 --- !u!1 &8990060745054441306
 GameObject:
   m_ObjectHideFlags: 0

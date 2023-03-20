@@ -40,6 +40,7 @@ public class DiscardObjectOnInteraction : BaseGameObject
     private void OnInteractionButtonPressed(PlayerInteraction interaction)
     {
         if (!InteractiveObject.InContact || !interaction.IsHoldingObject) return;
+        if (interaction.HeldObject.HasTag("Cooldown")) return;
         interaction.HeldObject.Pool.Release(interaction.HeldObject);
         interaction.HeldObject = null;
 

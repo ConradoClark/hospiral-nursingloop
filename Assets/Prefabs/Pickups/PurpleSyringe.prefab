@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6685615990942423023}
   - component: {fileID: 3641244595367887151}
   - component: {fileID: 8675625890983185164}
+  - component: {fileID: 8238250531032715199}
   m_Layer: 8
   m_Name: PurpleSyringe
   m_TagString: Untagged
@@ -103,3 +104,19 @@ MonoBehaviour:
 
     Shot'
   <DisplayColor>k__BackingField: {r: 0.7529412, g: 0.6784314, b: 0.8, a: 1}
+--- !u!114 &8238250531032715199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7670715397034842440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3448088b85c8f469bb8cc6583f5f36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <RunOnEnable>k__BackingField: 1
+  <Loop>k__BackingField: 0
+  <TimerReference>k__BackingField: {fileID: 0}
+  <PooledObject>k__BackingField: {fileID: 8675625890983185164}

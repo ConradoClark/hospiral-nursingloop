@@ -15,6 +15,8 @@ internal class StoreAndRetrieveObjectOnInteraction : BaseGameObject
 
     [field: SerializeField] public string[] IdentifierRequirement { get; private set; }
 
+    [field:SerializeField] public EffectPoolable StarterItem { get; private set; }
+
     public IPoolableComponent StoredObject { get; private set; }
 
     [field: SerializeField] public bool CanStoreAnything { get; private set; }
@@ -36,6 +38,11 @@ internal class StoreAndRetrieveObjectOnInteraction : BaseGameObject
     protected override void OnEnable()
     {
         base.OnEnable();
+
+        if (StarterItem != null)
+        {
+            StoredObject = StarterItem;
+        }
         this.ObserveEvent<PlayerEvents, PlayerInteraction>
             (PlayerEvents.OnInteractionButtonPressed, OnInteractionButtonPressed);
     }

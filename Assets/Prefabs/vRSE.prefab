@@ -29,7 +29,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 766281811219120853}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.14, y: -2.507, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -103,7 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <MainPlayerAnimator>k__BackingField: {fileID: 0}
   <Interaction>k__BackingField: {fileID: 482033194111222016}
-  <MoveController>k__BackingField: {fileID: 0}
+  <MoveController>k__BackingField: {fileID: 3475173776794974425}
 --- !u!114 &482033194111222016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,13 +196,13 @@ MonoBehaviour:
   CeilingTrigger: {fileID: 11400000, guid: 69eb225531e5928429ff88b42b9fb3b8, type: 2}
   GravityIdentifier: {fileID: 11400000, guid: 43f39d9ff2450e64281a6a19134e06b5, type: 2}
   JumpInput: {fileID: -2214415901031672562, guid: 44dd1c6e6d73cf647884075b6f1aad54, type: 3}
-  JumpSpeed: 12
+  JumpSpeed: 12.5
   AccelerationTime: 0.15
   DecelerationTime: 0.3
   MovementStartEasing: 0
   MovementEndEasing: 0
   Target: {fileID: 7809868399096772514}
-  InputBufferTime: 0.3
+  InputBufferTime: 0.35
   CoyoteJumpTime: 0.2
   MinJumpHoldInSeconds: 0.1
 --- !u!114 &2272873068225297889

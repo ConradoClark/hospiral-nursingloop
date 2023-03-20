@@ -18,7 +18,7 @@ public class ReplaceObjectOnInteraction : BaseGameObject
 
     [field: SerializeField]
     public ScriptPrefab ReplacementObject { get; private set; }
-
+    
     [field: SerializeField]
     public AudioClip Sound { get; private set; }
 
@@ -46,6 +46,7 @@ public class ReplaceObjectOnInteraction : BaseGameObject
     private void OnInteractionButtonPressed(PlayerInteraction interaction)
     {
         if (!InteractiveObject.InContact || !interaction.IsHoldingObject) return;
+        if (interaction.HeldObject.HasTag("Cooldown")) return;
         if (IdentifierRequirement.All(req => !interaction.HeldObject.HasTag("Identifier", req))) return;
 
         interaction.HeldObject.Pool.Release(interaction.HeldObject);

@@ -35,7 +35,7 @@ internal class GameLevel : BaseGameRunner
 
     public float GetIntervalBetweenPatients()
     {
-        return 60 - Mathf.Clamp(5 * Level.Value, 0, 40);
+        return 25 - Mathf.Clamp(4 * Level.Value, 0, 20);
     }
 
     protected override void OnAwake()
@@ -68,8 +68,11 @@ internal class GameLevel : BaseGameRunner
         _player.MoveController.UnblockMovement(this);
     }
 
+    private bool _doubled;
     protected override IEnumerable<IEnumerable<Action>> Handle()
     {
+        if (Level.Value == 7) yield return TimeYields.WaitSeconds(GameTimer, 10);
+
         while (ComponentEnabled && !GameOver)
         {
             var bed = _bedManager.GetRandomUnoccupiedBed();
@@ -80,22 +83,36 @@ internal class GameLevel : BaseGameRunner
                 bed = _bedManager.GetRandomUnoccupiedBed();
             }
 
-            if (Ambulance.TrySpawnEffect(bed.Section.transform.position +
-                                         (bed.IncomingAmbulanceDirection > 0
-                                             ? RightAmbulanceOffset
-                                             : LeftAmbulanceOffset),
-                    out var comp
-                ))
+            SpawnAmbulance(bed);
+
+            if (!_doubled && Level.Value >= 3 && Random.value < Level.Value * 0.1f)
             {
-                var ambulance = comp.Component.GetComponent<Ambulance>();
-                ambulance.Target = bed;
-                bed.IsOccupied = true;
+                _doubled = true;
+                yield return TimeYields.WaitSeconds(GameTimer, Random.Range(1, 5f));
+                continue;
             }
 
             yield return TimeYields.WaitSeconds(GameTimer, GetIntervalBetweenPatients()
                 , breakCondition: () => _bedManager.IsHospitalEmpty);
 
+            _doubled = false;
+
             if (_bedManager.IsHospitalEmpty) yield return TimeYields.WaitSeconds(GameTimer, Random.Range(1, 5f));
+        }
+    }
+
+    private void SpawnAmbulance(Bed bed)
+    {
+        if (Ambulance.TrySpawnEffect(bed.Section.transform.position +
+                                     (bed.IncomingAmbulanceDirection > 0
+                                         ? RightAmbulanceOffset
+                                         : LeftAmbulanceOffset),
+                out var comp
+            ))
+        {
+            var ambulance = comp.Component.GetComponent<Ambulance>();
+            ambulance.Target = bed;
+            bed.IsOccupied = true;
         }
     }
 }

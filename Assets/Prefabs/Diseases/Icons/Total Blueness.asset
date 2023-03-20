@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Total Blueness
   m_EditorClassIdentifier: 
   Prefab: {fileID: 1361793035552511407, guid: e382dec990b0a4b4688203eb0aa6450f, type: 3}
-  DefaultPoolSize: 10
+  DefaultPoolSize: 30
   Type: 1

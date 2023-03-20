@@ -41,6 +41,7 @@ public class InteractiveObject : BaseGameRunner
         {
             if (_spriteRenderer == null)
             {
+                InContact = false;
                 yield return TimeYields.WaitOneFrameX;
                 yield break;
             }
@@ -55,7 +56,7 @@ public class InteractiveObject : BaseGameRunner
 
                 _eventPublisher.PublishEvent(PlayerEvents.OnInteractiveObjectHover, this);
 
-                while (trigger)
+                while (trigger && ComponentEnabled)
                 {
                     trigger = _physicsObject.GetPhysicsTrigger(ContactTrigger);
                     yield return TimeYields.WaitOneFrameX;
@@ -68,7 +69,7 @@ public class InteractiveObject : BaseGameRunner
 
                 if (hasTouched) _eventPublisher.PublishEvent(PlayerEvents.OnInteractiveObjectLeave, this);
 
-                while (!trigger)
+                while (!trigger && ComponentEnabled)
                 {
                     trigger = _physicsObject.GetPhysicsTrigger(ContactTrigger);
                     yield return TimeYields.WaitOneFrameX;
@@ -76,6 +77,7 @@ public class InteractiveObject : BaseGameRunner
             }
         }
 
+        InContact = false;
         yield return TimeYields.WaitOneFrameX;
     }
 }

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Glitter Virus
   m_EditorClassIdentifier: 
   Prefab: {fileID: 1361793035552511407, guid: 5028626e11e865840be231481164fdd5, type: 3}
-  DefaultPoolSize: 10
+  DefaultPoolSize: 30
   Type: 1
